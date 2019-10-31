@@ -1,0 +1,25 @@
+{
+  "name": "trillo-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "live-server public",
+    "build": "node-sass src/styles/main.scss public/css/style.css -w",
+    "build-prod": "node-sass src/styles/main.scss public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/sergeyklimenko/trillo-website.git"
+  },
+  "author": "Sergey Klimenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/sergeyklimenko/trillo-website/issues"
+  },
+  "homepage": "https://gitlab.com/sergeyklimenko/trillo-website#readme",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0"
+  }
+}

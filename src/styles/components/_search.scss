@@ -1,0 +1,98 @@
+.search {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    @media only screen and (max-width: 28.125em) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__input {
+        width: 90%;
+
+        // Negative margin so button would end up on top of input
+        margin-right: -3.25rem;
+        padding: .7rem 2rem;
+
+        border: none;
+        border-radius: 100px;
+
+        // Inherit from header element
+        font-size: inherit;
+        font-family: inherit;
+        color: var(--color-grey-dark-1);
+
+        background-color: var(--color-grey-light-2);
+
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
+    }
+
+    // Do not show search content if placeholder is active or input is not in focus
+    &__input:placeholder-shown ~ &__balloon {
+        display: none;
+    }
+
+    &__input:not(:focus) ~ &__balloon {
+        display: none;
+    }
+
+    // Change color of button to color of input when focused
+    &__input:focus ~ &__btn {
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__btn {
+        border: none;
+        background-color: var(--color-grey-light-2);
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-grey-dark-3);
+    }
+
+    // Search content
+    &__balloon {
+        position: absolute;
+        top: 100%;
+        left: 1%;
+        overflow: hidden;
+
+        margin-top: 5px;
+
+        background-color: var(--color-grey-light-3);;
+        border-radius: 6px;
+        width: 100%;
+    }
+
+    &__item {
+        padding: 1rem;
+
+        &:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            cursor: pointer;
+        }
+    }
+}

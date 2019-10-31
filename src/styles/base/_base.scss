@@ -1,0 +1,47 @@
+// Define CSS variables
+:root {
+
+    // COLORS
+    --color-primary:      #eb2f64;
+    --color-primary-dark: #BA265D;
+    --color-primary-light:#FF3366;
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+    --color-white:       #fff;
+    --color-black:       #000;
+
+    // SHADOWS
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    // Define 1rem = 10px
+    font-size: 62.5%;
+
+    @media only screen and (max-width: 62.5em) {
+        font-size: 50%; // 1rem = 8px
+    }
+}
+
+body {
+    background-image: linear-gradient(to right bottom, var(--color-primary-dark), var(--color-primary-light));
+    background-size: cover;
+
+    // Temporary fix for background as no element has enough height to cover entire screen
+    // min-height: 100vh;
+}

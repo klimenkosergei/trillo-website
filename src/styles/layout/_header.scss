@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 7rem;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-grey-light-2);
+
+    font-size: 1.4rem;
+
+    @media only screen and (max-width: 28.125em) {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+    }
+
+    &__logo {
+        height: 3.25rem;
+        margin-left: 2rem;
+    }
+}
