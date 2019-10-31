@@ -20,6 +20,6 @@
   "homepage": "https://gitlab.com/sergeyklimenko/trillo-website#readme",
   "dependencies": {
     "live-server": "^1.2.1",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.13.0"
   }
 }
