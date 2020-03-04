@@ -5,20 +5,18 @@
   "main": "index.js",
   "scripts": {
     "serve": "live-server public",
-    "build": "node-sass src/styles/main.scss public/css/style.css -w",
-    "build-prod": "node-sass src/styles/main.scss public/css/style.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/sergeyklimenko/trillo-website.git"
+    "watch": "node-sass src/styles/main.scss public/css/main.css -w",
+    "build": "gulp build"
   },
   "author": "Sergey Klimenko",
   "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/sergeyklimenko/trillo-website/issues"
-  },
-  "homepage": "https://gitlab.com/sergeyklimenko/trillo-website#readme",
   "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^4.0.2",
     "live-server": "^1.2.1",
     "node-sass": "^4.13.0"
   }
