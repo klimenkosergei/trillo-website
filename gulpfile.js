@@ -19,7 +19,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('assets', () => {
-  return gulp.src('public/img/*').pipe(gulp.dest('dist/img'));
+  return gulp.src('public/trillo/img/*').pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('html', () => {
